@@ -231,7 +231,7 @@ function Get-DeepLX {
         Start-DeepLX -Token $Key -Port $Port -Job
     }
     $srv = $Server+":"+$Port
-    $url = "http://$srv/translate"
+    $url = "http://$srv/v1/translate"
     $Header = @{
         "Content-Type" = "application/json"
         "Authorization" = "Bearer $Key"
